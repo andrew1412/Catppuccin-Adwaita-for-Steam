@@ -1,0 +1,2196 @@
+/* -------------- */
+/* --- Colors --- */
+/* -------------- */
+
+:root
+{
+	--bg: #303446;
+	--fg: #c6d0f5;
+
+	--button_radius: 6px;
+	--button_pill_radius: 9999px;
+	--card_radius: calc(var(--button_radius) + 6px);
+	--menu_radius: 6px;
+	--menu_margin: 6px;
+	--menu_padding: 12px;
+	--window_radius: calc(var(--button_radius) + 6px);
+	--popover_radius: var(--window_radius);
+
+	--accent: #51576d;
+	--accent_bg: #414559;
+	--accent_fg: var(--fg);
+
+	--destructive: #ea999c;
+	--destructive_bg: #e78284;
+	--destructive_fg: var(--fg);
+
+	--success: #8ff0a4;
+	--success_bg: #26a269;
+	--success_fg: var(--fg);
+
+	--warning: #ef9f76;
+	--warning_bg: #e5c890;
+	--warning_fg: #232634;
+
+	--error: #ea999c;
+	--error_bg: #e78284;
+	--error_fg: var(--fg);
+
+	--window_bg: var(--bg);
+	--window_fg: var(--fg);
+
+	--view_bg: #292c3c;
+	--view_fg: var(--fg);
+
+	--headerbar_bg: #232634;
+	--headerbar_fg: var(--fg);
+	--headerbar_border: #838ba7;
+	--headerbar_backdrop: rgba(48,52,70,0);
+	--headerbar_shade: rgba(0, 0, 0, 0.36);
+
+	--popover_bg: #292c3c;
+	--popover_fg: var(--fg);
+
+	--toast_bg: rgba(0, 0, 0, 0.7);
+	--toast_fg: rgba(255, 255, 255, 0.9);
+	--toast_margin: 12px;
+	--toast_margin_bottom: 24px;
+	--toast_border_radius: 150px;
+	--toast_border_spacing: 6px;
+	--toast_padding: 6px;
+	--toast_padding_left: 12px;
+
+	--button_bg: rgba(255, 255, 255, 0.1);
+	--button_hover_bg: rgba(255, 255, 255, 0.15);
+	--button_active_bg: rgba(255, 255, 255, 0.3);
+	--button_disabled_bg: rgba(255, 255, 255, 0.05);
+	--button_fg: rgba(255, 255, 255, 1);
+	--button_disabled_fg: rgba(255, 255, 255, 0.5);
+
+	--button_suggested_bg: linear-gradient(0deg, var(--accent_bg), var(--accent_bg));
+	--button_suggested_hover_bg: rgba(255, 255, 255, 0.1);
+	--button_suggested_click_bg: rgba(0, 0, 0, 0.2);
+	--button_suggested_blend: overlay;
+
+	--checkbox_checked_bg: var(--button_suggested_bg);
+	--checkbox_checked_sw: 45;
+	--checkbox_radius: 6px;
+	--checkbox_bg: transparent;
+	--checkbox_bs: inset 0px 0px 0px 2px var(--button_hover_bg);
+
+	--border: rgba(255, 255, 255, 0.15);
+
+	--card_bg: #292c3c);
+	--card_fg: var(--fg);
+
+	--scrollbar: rgba(255, 255, 255, 0.2);
+	--scrollbar_hover: rgba(255, 255, 255, 0.4);
+	--scrollbar_active: rgba(255, 255, 255, 0.6);
+
+	--focus_ring: rgba(120, 174, 237, 0.5);
+	--focus_ring_bs: inset 0px 0px 0px 2px var(--focus_ring);
+
+	--ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--focus_transition: box-shadow 200ms var(--ease-out-quad), background 200ms var(--ease-out-quad);
+
+	--dim_label_fg: rgba(255, 255, 255, 0.55);
+
+	--basefont: "Cantarell";
+}
+
+/* -------------- */
+/* --- Global --- */
+/* -------------- */
+/* Store/Community Background */
+div#responsive_page_template_content,
+body.v6
+{
+	background: var(--view_bg) !important;
+}
+
+/* Store Game Page Blue BG */
+div#responsive_page_template_content .game_page_background.game,
+div#responsive_page_template_content .game_background_glow {
+	background: none !important;
+}
+
+/* Mid Page Gradient */
+.home_ctn.tab_container
+{
+	background: none !important;
+}
+
+/* Friends Page Gradient */
+#pagecontent > .friends_header_bg
+{
+	background: none !important;
+}
+
+/* Friends Page Title Bar */
+#friends_list > .profile_friends.title_bar
+{
+	background: var(--bg) !important;
+}
+
+/* Footer */
+.responsive_page_content #footer
+{
+	background: var(--bg) !important;
+}
+
+/* --------------- */
+/* --- Library --- */
+/* --------------- */
+
+/* Post Login Loading Screen */
+
+[class*="index_Container_"][class*="index_PreloadThrobber_"]
+{
+	background: var(--bg) !important;
+}
+
+/* --- Main Library View --- */
+/* Backgrounds */
+#root > [class*="library_Container_"],
+[class*="libraryhome_LibraryHome_"],
+[class*="library_AppDetailsTransitionGroup_"]
+{
+	background: var(--bg) !important;
+	box-shadow: none !important;
+}
+
+[class*="libraryhome_UpdatesContainer_"]
+{
+	background: var(--view_bg) !important;
+	border-bottom: 1px solid var(--border) !important;
+}
+
+[class*="libraryhome_Container_"]
+{
+	background: none !important;
+}
+
+/* Mouse Over Descriptions */
+[class*="appdetailsgameinfopanel_Description_"]
+{
+	background: var(--popover_bg) !important;
+}
+
+/* Popup Elements */
+[class*="libraryhomeshowcases_CollectionDropDownContainer_"][class*="libraryhomeshowcases_CollectionDropDownContainer_"] ._DialogInputContainer[class*="dropdown_DialogDropDownMenu_"],
+.DialogMenuPosition[class*="appgrid_SortingDropDownContainer_"] > div,
+[class*="tooltip_TextToolTip_"],
+[class*="contextmenu_contextMenu_"]
+{
+	background: var(--popover_bg) !important;
+	border: none !important;
+	border-radius: var(--menu_radius) !important;
+	color: var(--fg) !important;
+}
+
+[class*="contextmenu_ContextMenuFocusContainer_"] [class*="dropdown_DialogDropDownMenu_Item_"]:hover,
+[class*="contextmenu_contextMenuItem_"]:hover,
+[class*="contextmenu_contextMenuItem_"][class*="contextmenu_active_"],
+[class*="library_ContextMenuAction_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+[class*="library_ContextMenuAction_"]
+{
+	background: none !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+/* Play Button */
+[class*="appportrait_Play_1"]
+{
+	background: var(--success_bg) !important;
+}
+
+[class*="appportrait_Download_"]
+{
+	background: var(--accent_bg) !important;
+}
+
+/* Update Summary */
+[class*="libraryhomenewupdates_HoversEnabled_"]:hover [class*="libraryhomenewupdates_EventSummaryContainer_"]
+{
+	background: var(--toast_bg) !important;
+}
+
+[class*="libraryhomenewupdates_EventOptions_"] > div
+{
+	background-color: var(--button_bg) !important;
+}
+
+[class*="libraryhomenewupdates_EventOptions_"]:hover > div
+{
+	background-color: var(--button_hover_bg) !important;
+}
+
+/* --- Left Panel --- */
+/* Backgrounds */
+[class*="gamelistbar_Container_"],
+[class*="gamelistbar_GameListHomeAndSearch_"],
+[class*="gamelistsectionheader_Container_"],
+[class*="gamelisthome_Bar_"]
+{
+	background: var(--bg) !important;
+	box-shadow: none !important;
+}
+
+/* Separator */
+[class*="library_LibraryWindowDivider"]
+{
+	background: var(--border) !important;
+	min-width: 1px !important;
+	width: 1px !important;
+}
+
+/* Home and Collections */
+[class*="gamelisthome_Bar_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelisthome_Bar_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelisthome_CollectionIconBox_"]
+{
+	background: var(--button_fg) !important;
+	opacity: 0.2 !important;
+}
+
+[class*="gamelisthome_CollectionButton_"]:hover [class*="gamelisthome_CollectionIconBox_"]
+{
+	opacity: 0.8 !important;
+}
+
+/* Filters and Buttons */
+[class*="gamelistdropdown_Bar_"]
+{
+	padding: 0px 6px !important;
+}
+
+[class*="gamelistdropdown_MenuHeader_"],
+[class*="gamelistdropdown_ScrollToTop_"] .SVGIcon_Arrow,
+[class*="appfilterpane_SaveButton_"],
+[class*="gamelistsearchbar_FilterTag_"]
+{
+	background: var(--button_bg) !important;
+	border: none !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelistdropdown_MenuHeader_"]:hover,
+[class*="gamelistdropdown_ScrollToTop_"]:hover .SVGIcon_Arrow
+{
+	background: var(--button_hover_bg) !important;
+	border: none !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelistdropdown_Active_"] svg
+{
+	fill: var(--accent_bg) !important;
+}
+
+[class*="gamelistdropdown_Active_"] svg circle
+{
+	stroke: var(--accent_bg) !important;
+}
+
+[class*="gamelistdropdown_DropDown_"],
+[class*="appfilterpane_Container_"],
+[class*="appfilterpane_Description_"]
+{
+	background: var(--popover_bg) !important;
+}
+
+[class*="appfilterpane_FilterBucketLabel_"]
+{
+	color: var(--fg) !important;
+}
+
+[class*="appfilterpane_SaveButton_"].Disabled
+{
+	background: var(--button_disabled_bg) !important;
+	color: var(--button_disabled_fg) !important;
+}
+
+[class*="gamelistsearchbar_AdvancedSearchPane_Woh0k"]::before
+{
+	background: none !important;
+}
+
+/* Game Search */
+[class*="gamelistsearchbar_SearchInput_"] input
+{
+	background-color: transparent !important;
+}
+
+[class*="gamelistsearchbar_SearchInput_"]
+{
+	background-color: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	color: var(--fg) !important;
+}
+
+[class*="gamelistsearchbar_SearchInput_"]:hover
+{
+	background-color: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+[class*="gamelistsearchbar_SearchInput_"] input:focus
+{
+	box-shadow: none !important;
+}
+
+[class*="gamelistsearchbar_AdvancedSearchButton_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+[class*="gamelistsearchbar_AdvancedSearchContainer_"]
+{
+	background: none !important;
+}
+
+[class*="gamelistsearchbar_AdvancedSearchContainer_"]:hover,
+[class*="gamelistsearchbar_AdvancedSearchContainer_"][class*="gamelistsearchbar_Extended_"]
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+/* Game Headers and Rows */
+[class*="gamelistsectionheader_SectionName"]
+{
+	color: var(--fg) !important;
+	font-weight: 500 !important;
+}
+
+[class*="gamelistsectionheader_Container_"],
+[class*="gamelistentry_Container_"]
+{
+	border: none !important;
+	margin-left: 6px !important;
+}
+
+[class*="gamelistentry_GameListEntryContainer_"]
+{
+	border: none !important;
+	padding-left: 6px !important;
+}
+
+[class*="gamelist_Container_"] .ReactVirtualized__Grid[style*="overflow: hidden;"]
+{
+	/* Only try to pad if the list doesnt overflow */
+	padding-right: 6px !important;
+}
+
+[class*="gamelistentry_GameIcon_"]
+{
+	margin: 0px 6px 0px 0px !important;
+}
+
+[class*="gamelistentry_Container_"]:hover,
+[class*="gamelistsectionheader_Container_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+[class*="gamelistentry_Selected_"][class*="gamelistentry_Container_"],
+[class*="gamelistentry_Selected_"][class*="gamelistentry_Container_"] :hover,
+[class*="gamelistentry_Selected_"] > [class*="gamelistentry_Container_"],
+[class*="gamelistentry_Selected_"] > [class*="gamelistentry_Container_"]:hover,
+[class*="gamelistentry_Selected_"] > [class*="gamelistentry_Container_"] :hover
+{
+	background: none !important;
+	box-shadow: none !important;
+}
+
+[class*="gamelistsectionheader_Selected_"],
+[class*="gamelistentry_HasContextMenuOpen_"],
+[class*="gamelistentry_Selected_"] [class*="gamelistentry_GameListEntryContainer_"],
+[class*="gamelistentry_Selected_"] [class*="gamelistentry_GameListEntryContainer_"][class*="gamelistentry_CloudError_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelistentry_HasContextMenuOpen_"]
+{
+	border: 1px var(--focus_ring) solid !important;
+}
+
+[class*="gamelistentry_HasContextMenuOpen_"] [class*="gamelistentry_GameListEntryContainer_"]
+{
+	margin-left: -1px !important;
+}
+
+[class*="gamelistsectionheader_Selected_"]:hover,
+[class*="gamelistentry_Selected_"] [class*="gamelistentry_GameListEntryContainer_"]:hover,
+[class*="gamelistentry_Selected_"] [class*="gamelistentry_GameListEntryContainer_"][class*="gamelistentry_CloudError_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="gamelistentry_Updating_"],
+[class*="gamelistentry_DownloadProgress_"],
+[class*="gamelistentry_Synchronizing_"],
+[class*="gamelistentry_CloudError_"],
+[class*="gamelistentry_CloudOutOfDate_"]
+{
+	color: var(--accent) !important;
+}
+
+[class*="gamelistentry_HoverOverlay_"],
+[class*="gamelistentry_HoverOverlay_"][class*="gamelistentry_Selected_"],
+[class*="gamelistentry_Selected_"] [class*="gamelistentry_Container_"][class*="gamelistentry_HoverOverlay_"]
+{
+	background: var(--bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+[class*="gamelistentry_HoverOverlay_"] [class*="gamelistentry_GameListEntryContainer_"]
+{
+	background: var(--button_hover_bg) !important;
+}
+/* --- Main Library View --- */
+/* Play Button */
+[class*="appportrait_Play_1"]
+{
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appportrait_Download_"]
+{
+	border-radius: var(--button_radius) !important;
+}
+
+/* Rounded Corners on Game Logos */
+[class*="appportrait_LibraryItemBox_"],
+[class*="libraryhomenewupdates_PartnerEventRowCapsule_MainImageContainer_"],
+[class*="appportraithover_AppPortraitHover_"],
+[class*="appportraithover_CapsuleBackgroundContainer_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+[class*="appportrait_LibraryItemBox_"][class*="appportrait_FeaturedCapsule_"] [class*="libraryassetimage_Image_"]
+{
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+/* Game Hours Subscript */
+[class*="appportrait_LibraryItemBoxSubscript_"]
+{
+	background: var(--toast_bg) !important;
+	border-radius: var(--toast_border_radius) !important;
+	margin-top: -20px !important;
+}
+
+/* New to Library */
+[class*="appportrait_AppPortraitBannerContainer_"]
+{
+	top: 1px !important;
+}
+
+[class*="appportrait_AppPortraitBannerContainer_"] [class*="appportrait_AppPortraitBanner_"]
+{
+	background: var(--accent_bg) !important;
+	border-bottom-left-radius: var(--card_radius) !important;
+	border-bottom-right-radius: var(--card_radius) !important;
+}
+
+/* Update Summary */
+[class*="libraryhomenewupdates_HoversEnabled_"]:hover [class*="libraryhomenewupdates_EventSummaryContainer_"]
+{
+	border-radius: var(--card_radius);
+}
+/*  --- Collection View --- */
+/* Background */
+[class*="allcollections_ScrollContainer_"],
+[class*="collectionview_OuterContainer_"]
+{
+	background: var(--bg) !important;
+}
+
+[class*="allcollections_Collection_"]
+{
+	background: var(--button_bg) !important;
+}
+
+[class*="allcollections_Collection_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+/* --- Game Details View --- */
+/* Background */
+[class*="appdetails_Glassy_"]
+{
+	background: var(--bg) !important;
+}
+
+/*  Disable Blurred Background */
+[class*="sharedappdetailsheader_ImgBlurBackdrop_"]
+{
+	display: none !important;
+}
+
+/* `Scroll to Top` Button */
+[class*="smartscrollcontainer_ScrollToTopButton_"]
+{
+	color: var(--toast_fg) !important;
+	height: 50px !important;
+}
+
+[class*="smartscrollcontainer_ScrollToTopButton_"] div
+{
+	background: var(--toast_bg) !important;
+	border-radius: var(--toast_border_radius) !important;
+	border-spacing: var(--toast_border_spacing) !important;
+	box-shadow: none !important;
+	margin-bottom: var(--toast_margin_bottom) !important;
+	margin: var(--toast_margin) !important;
+	padding: var(--toast_padding) !important;
+}
+
+/* Play Button Color */
+[class*="appactionbutton_ButtonChild"]
+{
+	background: var(--accent_bg) !important;
+}
+
+[class*="appactionbutton_Green"] > [class*="appactionbutton_ButtonChild"]
+{
+	background: var(--success_bg) !important;
+}
+
+/* Progress Bar Color */
+[class*="appdetailsplaysection_DetailsProgressBar_"],
+[class*="appdetailsachievementssection_AchievementProgress_"]
+{
+	background: var(--accent_bg) !important;
+}
+
+/* Rounded Corners */
+[class*="appactionbutton_ButtonChild"],
+[class*="appactivityday_EventBody_"],
+[class*="appactivityday_PartnerEventMediumImage_Image_"],
+[class*="appactivityday_PartnerEventLargeImage_Image_"],
+[class*="appactivityday_PartnerEventLargeImage_Container_"],
+[class*="appactivityday_PartnerEvent_"],
+[class*="appdetailsactivitysection_FetchMoreContainer_"],
+[class*="appdetailscommunityfeed_HeaderStyles_"],
+[class*="appdetailsdlcsection_Art_"],
+[class*="appdetailsprimarylinkssection_LinksSectionBody_"],
+[class*="appdetailssection_Highlight_"],
+[class*="appdetailssection_RightColumnSection_"],
+[class*="appdetailsspotlight_ReviewContainer_"],
+[class*="appdetailsworkshopsection_FeaturedItemImage_"],
+[class*="appdetailsworkshopsection_WorkshopContainer_"],
+[class*="libraryassetimage_Visible_"],
+[class*="spotlight_MajorEventImageContainer_"],
+[class*="spotlight_MajorEventContainer_"],
+[class*="spotlight_MajorEventBackground_"],
+[class*="writereview_RightContainer_"] button,
+[class*="appdetailsgameinfopanel_Description_"],
+[class*="appactivitydlc_Contents_"]
+{
+	border-radius: var(--card_radius) !important;
+	background: var(--card_bg) !important;
+	border: none !important;
+}
+
+[class*="appdetailsachievementssection_AdditionalItem_"],
+[class*="appdetailscommunityfeed_LoadContentButton_"]
+{
+	border-radius: var(--button_radius) !important;
+	background: var(--button_bg) !important;
+	border: none !important;
+}
+
+/* Play button, streaming device dropdown */
+[class*="appactionbutton_PlayButtonContainer"]
+{
+	border-radius: var(--button_radius) !important;
+	background-color: var(--accent_bg) !important;
+	color: var(--accent_fg) !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"],
+[class*="appactionbutton_ShowingStreaming"]
+{
+	min-width: 140px !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"][class*="appactionbutton_Green"]
+{
+	background-color: var(--success_bg) !important;
+	color: var(--success_fg) !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"][class*="appactionbutton_Disabled"]
+{
+	background-color: var(--button_disabled_bg) !important;
+	color: var(--button_disabled_fg) !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] [class*="appactionbutton_ButtonText"]
+{
+	color: var(--button_fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 18px !important;
+	line-height: 32px !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	text-transform: none !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"]:first-child > svg
+{
+	display: none !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"] > svg > path,
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"] > svg > polygon
+{
+	stroke: currentColor !important;
+	fill: currentColor !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"]
+{
+	margin: 0 !important;
+	border-radius: var(--button_radius) !important;
+	background-color: transparent !important;
+	transition: background 0.15s, border-color 0.15s, border-top-left-radius 0s, border-bottom-left-radius 0s !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"]:hover
+{
+	background-color: var(--button_hover_bg) !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"]:active
+{
+	background-color: var(--button_active_bg) !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"] > [class*="appactionbutton_ButtonChild"]:last-child:not(:first-child)
+{
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-left: 1px var(--button_active_bg) solid !important;
+}
+
+[class*="appactionbutton_PlayButtonContainer"]:hover > [class*="appactionbutton_ButtonChild"]:last-child:not(:first-child)
+{
+	border-radius: var(--button_radius) !important;
+	border-color: transparent !important;
+}
+
+/* Hover Highlight */
+[class*="appactivityday_PartnerEventTextOnly_Container_"]:hover,
+[class*="appactivityday_PartnerEventMediumImage_Container_"]:hover,
+[class*="appactivityday_PartnerEventLargeImage_Container_"]:hover,
+[class*="appdetailsachievementssection_AdditionalItem_"]:hover,
+[class*="appdetailscommunityfeed_LoadContentButton_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+[class*="appactivityday_PartnerEventTextOnly_Container_"],
+[class*="appactivityday_PartnerEventMediumImage_Container_"],
+[class*="appactivityday_PartnerEventLargeImage_Container_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+/* Remove Unneeded Backgrounds */
+[class*="appactivityday_PartnerEventMediumImage_Container_"],
+[class*="appdetailsdlcsection_Gloss_"],
+[class*="writereview_RatingContainer_"],
+[class*="appdetailsgameinfopanel_Container_"],
+[class*="appactivityday_LeftSideMajorUpdateBar_"],
+[class*="appactivityday_PartnerEventLargeUpdate_"]
+{
+	background: none !important;
+}
+
+/* Remove Image Borders */
+[class*="appactivityday_PartnerEvent_"],
+[class*="appactivityday_PartnerEventLargeUpdate_"],
+[class*="spotlight_MajorEventContainer_"],
+[class*="appactivityday_PartnerEventLargeUpdate_"]
+{
+	border-image-source: none !important;
+}
+
+/* Border Radius Fixes */
+[class*="appdetailsworkshopsection_WorkshopContainer_"]
+{
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+[class*="appdetailsworkshopsection_WorkshopHightlight_"]
+{
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+[class*="appdetailsachievementssection_Icon_"],
+[class*="appdetailsachievementssection_AdditionalItem_"]
+{
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appdetailshover_AppDetailsHover_"],
+[class*="appdetailshover_Background_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+/* Hide Blur From Major Updates */
+[class*="appactivityday_Blur_"]
+{
+	display:none;
+}
+
+/* Partner Updates */
+[class*="appactivityday_PartnerEventLargeUpdate_"]
+{
+	box-shadow: none !important;
+}
+
+[class*="appactivityday_PartnerEventTypeUpdate_"]
+{
+	color: var(--fg) import !important;
+}
+
+[class*="appactivityday_PartnerEventLargeImage_Summary_"]
+{
+	color: #929799 !important;
+}
+
+[class*="appactivityday_PartnerEventFeaturedHeader_"]
+{
+	background: none !important;
+}
+
+/* Post Game Summary */
+[class*="spotlightgameplaysummary_SummaryCarouselContainer_"]
+{
+	background: var(--card_bg) !important;
+	border-radius: var(--card_radius) !important;
+}
+
+[class*="spotlightgameplaysummary_SummaryCarouselContainer_"]::after
+{
+	box-shadow: none !important;
+}
+
+/* Remove Glassy Background */
+[class*="appdetailsoverview_BackdropGlass_"]
+{
+	background: none !important;
+	border-top: 1px solid var(--border) !important;
+}
+
+[class*="appdetailsplaysection_Glassy_"][class*="appdetailsplaysection_PlayBar_"]
+{
+	background: var(--view_bg) !important;
+	border-bottom: 1px solid var(--border) !important;
+}
+
+[class*="appdetailsoverview_Container_"]
+{
+	background: var(--bg) !important;
+}
+
+/* Available DLC */
+[class*="appactivitydlc_Contents_"],
+[class*="appactivitydlc_CarouselItem_"] [class*="appactivitydlc_CarouselImage_"]
+{
+	box-shadow: none !important;
+}
+
+[class*="appactivitydlc_ViewAll_"]
+{
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appactivitydlc_ViewAll_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appdetailsdlcsection_StoreHover_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+[class*="tooltip_ToolTipCustom_"]
+{
+	background: var(--popover_bg) !important;
+	border-radius: var(--popover_radius) !important;
+}
+
+/* Activity Post */
+[class*="posttextentry_PostTextEntryArea_"],
+[class*="posttextentry_PostTextEntryArea_"]:focus,
+[class*="posttextentry_PostButton_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+	box-shadow: none !important;
+}
+
+[class*="posttextentry_PostButton_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* Comment and Like Buttons */
+[class*="comment_thread_CanClick_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="comment_thread_ActivityCommentThread_"]
+{
+	background: none !important;
+}
+
+/* AppDetails Play Section Buttons */
+[class*="appdetailsplaysection_MenuButton_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appdetailsplaysection_MenuButton_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* App Details Link Buttons */
+[class*="appdetailsprimarylinkssection_LinksSectionBody_"]
+{
+	padding: 0px 10px !important;
+}
+
+[class*="appdetailsprimarylinkssection_Link_"]
+{
+	padding: 5px 10px !important;
+}
+
+[class*="appdetailsprimarylinkssection_Link_"]
+{
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appdetailsprimarylinkssection_Link_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+/* Right Side Buttons */
+[class*="appdetailsbutton_AppDetailsButton_"]
+{
+	background: none !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="appdetailsbutton_AppDetailsButton_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+/* --- Downloads View --- */
+/* BG */
+[class*="downloads_DownloadsPage_"]
+{
+	background: var(--bg) !important;
+}
+
+/* - Header - */
+[class*="downloadgraph_GraphAndStats_"]
+{
+	background: var(--view_bg) !important;
+	border-bottom: 1px solid var(--border) !important;
+}
+
+/* Remove Gradient when Downloads are Empty */
+[class*="downloadgraph_HeroAndLogo_"],
+[class*="downloadgraph_HeroAndLogo_"] img[class*="libraryassetimage_Visible_"]
+{
+	background: none !important;
+}
+
+/* Blue Separator Line */
+[class*="downloads_TopBar_SEmVp"]
+{
+	background: none !important;
+}
+
+/* Top Right Settings Button */
+[class*="downloadgraph_SettingsButton_"] button
+{
+	background: var(--button_bg) !important;
+}
+
+[class*="downloadgraph_SettingsButton_"] button:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+/* - Downloads - */
+/* Download Items */
+[class*="downloads_SectionItem_"]
+{
+	background: var(--card_bg) !important;
+}
+
+[class*="downloads_SectionItem_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+[class*="downloads_Active_"] [class*="downloads_SectionList_"]
+{
+	border: none !important;
+}
+
+[class*="downloads_SectionList_"] [class*="downloads_SectionItemWrapper_"]
+{
+	padding: var(--menu_margin) 0px !important;
+}
+
+/* Buttons */
+[class*="downloads_Button_"]
+{
+	background: none !important;
+}
+
+[class*="downloads_RemoveAllButton_"]
+{
+	background: var(--button_bg) !important;
+}
+
+[class*="downloads_Button_"]:hover,
+[class*="downloads_RemoveAllButton_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border: none !important;
+}
+
+/* Fix Logo Border */
+[class*="downloadgraph_HeroContainer"] [class*="libraryassetimage_Visible_"]
+{
+	background: none !important;
+}
+
+/* Top Right Settings Button */
+[class*="downloadgraph_SettingsButton_"] button,
+[class*="downloadgraph_SettingsButton_"] button:hover
+{
+	border-radius: var(--button_radius) !important;
+}
+
+/* Download Items */
+[class*="downloads_SectionItem_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+[class*="downloads_SectionItem_"]:hover
+{
+	border-radius: var(--card_radius) !important;
+}
+
+/* Active Download Item */
+[class*="downloads_SectionItem_"][class*="downloads_Active_"]
+{
+	margin: 10px 12px 0px 12px !important;
+	padding: 8px 0px 8px 12px !important;
+}
+
+/* Download Buttons */
+[class*="downloads_Button_"],
+[class*="downloads_Button_"]:hover,
+[class*="downloads_RemoveAllButton_"],
+[class*="downloads_RemoveAllButton_"]:hover
+{
+	border-radius: var(--button_radius) !important;
+}
+
+.ModalPosition_Content,
+.ModalPosition_Content > .DialogContent
+{
+	border-radius: var(--card_radius) !important;
+	overflow: hidden !important;
+}
+
+.ModalPosition_TopBar
+{
+	display: none !important;
+}
+
+.ModalPosition_Content > .DialogContent
+{
+	background: var(--popover_bg) !important;
+	color: var(--popover_fg) !important;
+}
+
+.GenericConfirmDialog
+{
+	padding: 0 !important;
+}
+
+.GenericConfirmDialog .DialogHeader,
+.GenericConfirmDialog .DialogBodyText,
+.GenericConfirmDialog .DialogBodyText[class*="cloudconflict_CloudConflictWarning_"]
+{
+	color: var(--popover_fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 20px !important;
+	line-height: normal !important;
+	font-weight: 800 !important;
+	letter-spacing: normal !important;
+	text-transform: none !important;
+	text-align: center;
+	margin: 0 !important;
+	padding: 24px 24px 16px 24px !important
+}
+
+.GenericConfirmDialog .DialogBodyText,
+.GenericConfirmDialog .DialogBodyText[class*="cloudconflict_CloudConflictWarning_"]
+{
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	padding: 0 24px !important;
+	flex-grow: 1 !important;
+}
+
+.GenericConfirmDialog .DialogBody
+{
+	overflow: hidden !important;
+}
+
+.ModalPosition_Content > .ModalPosition_Dismiss
+{
+	display: none !important;
+}
+
+.GenericConfirmDialog .DialogFooter
+{
+	margin-top: 24px !important;
+}
+
+/* Swap buttons to make the Cancel button first */
+.GenericConfirmDialog .DialogFooter ._DialogColLayout
+{
+	flex-direction: row-reverse !important;
+	overflow: hidden !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton
+{
+	height: 42px !important;
+	color: var(--button_fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 15px !important;
+	line-height: normal !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
+	border-top: 1px var(--border) solid !important;
+	border-left: 1px var(--border) solid !important;
+	margin: 0 !important;
+	margin-left: -1px !important;
+	max-width: none !important;
+	transition: var(--focus_transition) !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton::before
+{
+	display: none !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton:hover
+{
+	background: rgba(255, 255, 255, 0.07) !important;
+	box-shadow: none !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton:active
+{
+	background: rgba(255, 255, 255, 0.16) !important;
+	box-shadow: none !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton.Primary
+{
+	color: var(--accent) !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton.Primary:hover
+{
+	background: rgba(120, 174, 237, 0.07) !important;
+}
+
+.GenericConfirmDialog .DialogFooter .DialogButton.Primary:active
+{
+	background: rgba(120, 174, 237, 0.16) !important;
+}
+
+.GenericConfirmDialog > .DialogContent_InnerWidth > form > div[class*="uninstalldialog_UninstallDialog_"]
+{
+	min-width: 500px !important;
+	width: 500px !important;
+}
+
+/* Uninstall button */
+.GenericConfirmDialog > .DialogContent_InnerWidth > form > div[class*="uninstalldialog_UninstallDialog_"] .DialogButton.Primary
+{
+	color: var(--destructive) !important;
+}
+
+.GenericConfirmDialog > .DialogContent_InnerWidth > form > div[class*="uninstalldialog_UninstallDialog_"] .DialogButton.Primary:hover
+{
+	background: rgba(255, 123, 99, 0.07) !important;
+}
+
+.GenericConfirmDialog > .DialogContent_InnerWidth > form > div[class*="uninstalldialog_UninstallDialog_"] .DialogButton.Primary:active
+{
+	background: rgba(255, 123, 99, 0.16) !important;
+}
+
+/* Window controls */
+.title-bar-actions
+{
+	position: absolute !important;
+	top: 12px !important;
+	right: 12px !important;
+}
+
+.title-bar-actions .title-area-icon
+{
+	width: 24px !important;
+	height: 24px !important;
+	border-radius: 50% !important;
+	margin-left: 14px !important;
+	background-color: var(--button_bg) !important;
+	transition: var(--focus_transition) !important;
+}
+
+.title-bar-actions .title-area-icon:hover
+{
+	background-color: var(--button_hover_bg) !important;
+}
+
+.title-bar-actions .title-area-icon:active
+{
+	background-color: var(--button_active_bg) !important;
+}
+
+.title-bar-actions .title-area-icon > svg
+{
+	width: 12px !important;
+	height: 12px !important;
+	margin-left: 6px !important;
+	margin-top: 6px !important;
+}
+
+.title-bar-actions .title-area-icon > svg > *
+{
+	stroke: var(--headerbar_fg) !important;
+	stroke-width: 32px !important;
+}
+
+.title-bar-actions .title-area-icon.minimizeButton,
+.title-bar-actions .title-area-icon.maximizeButton
+{
+	display: none !important;
+}
+
+.title-area-icon.maximizeButton svg
+{
+	width: 7px !important;
+	margin-left: 9px !important;
+	margin-top: 6px !important;
+}
+
+.title-area-icon.maximizeButton svg rect
+{
+	width: 160px !important;
+	height: 160px !important;
+	stroke-width: 70px !important;
+}
+
+.title-area-icon.maximizeButton svg line
+{
+	display: none !important;
+}
+
+.title-area-icon.minimizeButton svg
+{
+	width: 10px !important;
+	margin-left: 7px !important;
+}
+
+/* PagedSettingsDialog */
+.ModalDialogPopup .DialogContent:not(.GenericConfirmDialog),
+.ModalDialogPopup .DialogContent:not(.GenericConfirmDialog) .DialogContentTransition,
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListColumn_"]
+{
+	background: var(--window_bg) !important;
+	color: var(--window_fg) !important;
+	padding: 0 !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListColumn_"]
+{
+	border-right: 1px var(--border) solid !important;
+}
+
+.ModalDialogPopup .DialogContent:not(.GenericConfirmDialog) .DialogHeader,
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListColumn_"] > [class*="pagedsettings_PagedSettingsDialog_Title_"]
+{
+    box-sizing: border-box !important;
+	height: 48px !important;
+	display: grid !important;
+	grid-template-columns: 1fr !important;
+	align-items: center !important;
+	padding: 12px !important;
+	margin: 0 !important;
+	background: var(--headerbar_backdrop) !important;
+	color: var(--headerbar_fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 14px !important;
+	line-height: normal !important;
+	font-weight: 700 !important;
+	letter-spacing: normal !important;
+	text-align: center !important;
+	text-transform: none !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	border-bottom: 1px var(--headerbar_shade) solid !important;
+}
+
+.ModalDialogPopup .DialogHeader > svg
+{
+	display: none !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListColumn_"] > div[class*="pagedsettings_PagedSettingsDialog_Title_"]
+{
+	margin-bottom: 5px !important;
+}
+
+.ModalDialogPopup:focus-within .DialogContent:not(.GenericConfirmDialog) .DialogHeader,
+.ModalDialogPopup:focus-within [class*="pagedsettings_PagedSettingsDialog_PageListColumn_"] > [class*="pagedsettings_PagedSettingsDialog_Title_"]
+{
+	background: var(--headerbar_bg) !important;
+}
+
+.ModalDialogPopup .title-area
+{
+	height: 48px !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"]
+{
+	color: var(--button_fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 15px !important;
+	line-height: normal !important;
+	font-weight: 400 !important;
+	letter-spacing: normal !important;
+	text-transform: none !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	margin: 1px 6px 1px 8px !important;
+	padding: 8px 12px !important;
+	border-radius: var(--button_radius) !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"]:hover
+{
+	background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"]:active
+{
+	background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"][class*="pagedsettings_Active_"]
+{
+	background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"][class*="pagedsettings_Active_"]:hover
+{
+	background-color: rgba(255, 255, 255, 0.13) !important;
+}
+
+.ModalDialogPopup [class*="pagedsettings_PagedSettingsDialog_PageListItem_"][class*="pagedsettings_Active_"]:active
+{
+	background-color: rgba(255, 255, 255, 0.19) !important;
+}
+
+.ModalDialogPopup .DialogContent_InnerWidth > *:not(.DialogHeader):not(form)
+{
+	padding: 16px !important;
+}
+/* ------------ */
+/* --- Chat --- */
+/* ------------ */
+
+/* BG */
+.client_chat_frame body
+{
+	background: var(--bg) !important;
+}
+
+/* Window Focus Indicator */
+.singleWindowFocusBar,
+.title-area-highlight
+{
+	display: none !important
+}
+
+/* - Left Panel - */
+.friendListHeaderContainer,
+.activeTab,
+.friendSearchInput[type=text],
+.friendlistListContainer,
+.FriendsListContent .friendlistListContainer .friendGroup.onlineFriends,
+.friendsListSectionTitle,
+.chatRoomListContainer,
+.friendListFooter
+{
+	background: var(--view_bg) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* Header Drag */
+.client_chat_frame .currentUserContainer [class*="personanameandstatus_statusAndName_"],
+.client_chat_frame .currentUserContainer [class*="personanameandstatus_gameName_"]
+{
+	-webkit-app-region: drag !important;
+}
+
+/* Avatar HeaderBar */
+.currentUserContainer
+{
+	border-bottom: 1px solid var(--border) !important;
+	background: var(--headerbar_bg) !important;
+}
+
+.singlewindow:not(.focused) .currentUserContainer
+{
+	background: var(--headerbar_backdrop) !important;
+}
+
+.AvatarAndUser
+{
+	padding-top: 2px !important;
+	max-height: 38px !important;
+}
+
+.currentUserAvatar img.avatar
+{
+	margin-top: 1px !important;
+}
+
+.currentUserAvatar .avatarHolder
+{
+	border: none !important;
+	height: 44px !important;
+	width: 44px !important;
+}
+
+.currentUserAvatar img.avatar
+{
+	border-radius: var(--button_radius) !important;
+}
+
+.currentUserContainer .labelHolder
+{
+	margin-bottom: -4px !important;
+}
+
+.currentUserContainer .statusHeaderGlow
+{
+	display: none !important;
+}
+
+.friendListButton.friendSettingsButton
+{
+	margin-top: -16px !important;
+	margin-right: 2px !important;
+}
+
+.chat_main.fullheight.responsive_friends .friendListButton.friendSettingsButton
+{
+	margin-right: 0px !important;
+	margin-top: 0px !important;
+	position: relative !important;
+	top: 40px !important;
+}
+
+.friendListButton.friendCollapseButton
+{
+	margin-right: 1px !important;
+	margin-top: -2px !important;
+}
+
+.friendListButton.friendSettingsButton .SVGIcon_Settings
+{
+	height: 16px !important;
+	width: 16px !important;
+}
+
+.friendListButton.friendCollapseButton .SVGIcon_DoubleArrow
+{
+	height: 14px !important;
+	width: 14px !important;
+}
+
+.currentUserContainer.online [class*="personanameandstatus_richPresenceLabel_"],
+.currentUserContainer.online [class*="personanameandstatus_playerName_"]
+{
+	color: var(--accent) !important;
+}
+
+/* Set Online Status Menu */
+.client_chat_frame [class*="contextmenu_contextMenu_"]
+{
+	background: var(--popover_bg) !important;
+}
+
+.client_chat_frame [class*="contextmenu_contextMenuItem_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+.client_chat_frame [class*="ntextmenu_contextMenuItem_"].menuChecked
+{
+	color: var(--accent) !important;
+}
+
+/* Remove Box Shadow */
+[class*="insetshadow_FriendListInsetShadowBottom_"],
+[class*="insetshadow_FriendListInsetShadowTop_"]
+{
+	background: none !important;
+}
+
+/* Panel Resizer */
+.singleWindowDivider
+{
+	background: var(--border) !important;
+	border: none !important;
+	min-width: 1px !important;
+	width: 1px !important;
+}
+
+/* Friend Hover BG */
+.friendStatusHover
+{
+	margin: 0px var(--menu_margin) !important;
+}
+
+.friendStatusHover:hover
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* Friend Status Text */
+.friend.online,
+.friend.online [class*="personanameandstatus_playerName_"],
+.friend.online [class*="personanameandstatus_richPresenceLabel_"]
+{
+	color: var(--accent) !important;
+}
+
+.friend.ingame [class*="personanameandstatus_playerName_"]
+{
+	color: var(--success) !important;
+}
+
+.friend.ingame [class*="personanameandstatus_richPresenceLabel_"]
+{
+	color: var(--success_bg) !important;
+}
+
+/* - Right Side - */
+.chatDialogs,
+.titleBarContainer.ChatTabs,
+.chatWindow,
+.chatWindow .chatEntry
+{
+	background: var(--bg) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* Text Entry */
+[class*="chatentry_chatEntryControls_"]
+{
+	background: var(--button_bg) !important;
+	border: 2px solid transparent;
+	border-radius: var(--button_radius) !important;
+	box-shadow: none !important;
+}
+
+[class*="chatentry_chatEntryControls_"] textarea:focus
+{
+	box-shadow: var(--focus_ring_bs) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* /command popup suggestions */
+.chatEntry [class*="suggestdialog_mentionDialog_"]
+{
+	background: var(--popover_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+.chatEntry [class*="suggestdialog_selected_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+/* File Upload */
+.chatFileUploadPreviewContainer,
+.chatFileUploadProgressContainer
+{
+	background: var(--popover_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+.chatFileUploadPreviewContainer img
+{
+	border-radius: var(--card_radius) !important;
+}
+
+.chatFileUploadProgressBarContainer .DialogProgressBar_Value {
+	background: var(--accent_bg) !important;
+}
+
+/* Chat Buttons */
+button[class*="chatentry_chatSubmitButton_"],
+.chatEntry .VoiceToggle,
+.chatBody .inviteAnotherFriendButton
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+button[class*="chatentry_EmoticonPickerButton_"]
+{
+	margin-right: 3px !important;
+}
+
+.chatEntry .ChatMessageEntryVoice
+{
+	margin-left: -1px !important;
+}
+
+[class*="chatentry_chatEntryActionsGroup_"],
+.chatEntry .ChatMessageEntryVoice
+{
+	background: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	outline: none !important;
+}
+
+.chatBody .inviteAnotherFriendButton .SVGIcon_Button
+{
+	fill: var(--button_active_bg) !important;
+}
+
+.ChatRoomGroupDialog_history .ScrollToBottomButton
+{
+	color: var(--fg) !important;
+}
+
+.ChatRoomGroupDialog_history .ScrollToBottomButton span
+{
+	background: var(--toast_bg) !important;
+	border-radius: var(--toast_border_radius) !important;
+	border-spacing: var(--toast_border_spacing) !important;
+	box-shadow: none !important;
+	margin-bottom: var(--toast_margin_bottom) !important;
+	margin: var(--toast_margin) !important;
+	padding: var(--toast_padding) !important;
+}
+
+/* Message Hover */
+[class*="messages_MsgWithAddons_"]:hover
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--menu_radius) !important;
+}
+
+/* Message Addons */
+[class*="messages_Addons_"]
+{
+	background: var(--popover_bg) !important;
+	border: 1px solid var(--border) !important;
+}
+
+/* Message Links */
+.chatHistory .msg a
+{
+	border-bottom: none !important;
+	color: var(--accent) !important;
+	text-decoration: underline !important;
+}
+
+/* Time Divider */
+.msg.timeDivision.time_passes .preHorizDivider,
+.msg.timeDivision.time_passes .horizDivider
+{
+	border: 1px dashed var(--border) !important;
+}
+
+/* Message Images */
+.chatHistory .chatImageContainer img,
+.BBCodeImageWrapper
+{
+	border-radius: var(--card_radius) !important;
+}
+
+/* Image Popup */
+.client_chat_frame #popup_target [class*="bbcode_ImageModalBackground_"],
+.client_chat_frame.ModalDialogPopup body.ModalDialogBody
+{
+	background: var(--popover_bg) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* Message Steam Store Link */
+.msgText > [class*="bbcode_ChatMessageSteamStore_"]
+{
+	background: var(--card_bg) !important;
+	border-radius: var(--card_radius) !important;
+}
+
+.msgText [class*="bbcode_ChatMessageSteamStore_Header_"]
+{
+	background: none !important;
+}
+
+.msgText [class*="bbcode_ChatMessageSteamStore_HeaderImage_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+.msgText [class*="bbcode_Blurred_"]
+{
+	display: none !important;
+}
+
+/* Message /me emote */
+.msg.ChatMsgSlashEmote .speaker
+{
+	background: none !important;
+}
+
+.msg.ChatMsgSlashEmote .msgText
+{
+	font-weight: bold !important;
+}
+
+/* Chat Tabs Headerbar */
+.ChatTabs .title-area
+{
+	background: var(--headerbar_bg) !important;
+	border-bottom: 1px solid var(--border) !important;
+	min-height: 48px !important;
+}
+
+.singlewindow:not(.focused) .ChatTabs .title-area
+{
+	background: var(--headerbar_backdrop) !important;
+}
+
+/* Chat Tabs Bottom Separator */
+.chatWindow .chatHeader
+{
+	background: none !important;
+	min-height: 1px !important;
+}
+
+/* Center Tabs */
+.ChatTabs
+{
+	display: flex !important;
+	justify-content: center !important;
+}
+
+/* Tabs Margin */
+.chatTabSetContainer [class*="chattabs_ChatTab_"]
+{
+	margin-right: 4px !important;
+}
+
+/* Active Chat Tab */
+[class*="chattabs_Active_"]
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* Tab Hover */
+[class*="chattabs_ChatTab_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="chattabs_Active_"]:hover
+{
+	background: var(--button_active_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+[class*="miniprofile_miniProfile_"]
+{
+	border-radius: var(--card_radius) !important;
+}
+
+/* Chat Tab Unread */
+.ChatTabs [class*="chattabs_UnreadGlow_"]
+{
+	background: var(--button_bg) !important;
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: var(--button_radius) !important
+}
+
+.ChatTabs [class*="chattabs_UnreadCircle_"]
+{
+	background: var(--accent_bg) !important;
+}
+
+/* Hide Close Button unless Hover */
+[class*="chattabs_ChatTab_"]:not(:hover) [class*="chattabs_CloseButton_"]
+{
+	display: none !important;
+}
+
+[class*="chattabs_CloseButton_"] .SVGIcon_X_Line line
+{
+	stroke: var(--fg) !important;
+}
+
+/* Hide Tab Separator */
+[class*="chattabs_ChatTab_"]::before,
+[class*="chattabs_ChatTab_"]::after
+{
+	background: none !important;
+}
+
+/* Open Friends List Button */
+.ChatTabs .chatTabOpenFriendsList
+{
+	background: var(--button_bg) !important;
+	border-radius: var(--button_radius) !important;
+	box-shadow: none !important;
+	height: 36px !important;
+}
+
+.ChatTabs .chatTabOpenFriendsList:hover
+{
+	background: var(--button_active_bg) !important;
+	border-radius: var(--button_radius) !important;
+}
+
+/* ------------------ */
+/* --- Scrollbars --- */
+/* ------------------ */
+
+body
+{
+	overflow: overlay !important;
+}
+
+::-webkit-scrollbar
+{
+	background: none !important;
+	min-width: 8px !important;
+	width: 8px !important;
+}
+
+::-webkit-scrollbar-corner
+{
+	background: #202020;
+}
+
+::-webkit-scrollbar-track
+{
+	background: none !important;
+	margin: 7px !important;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-clip: padding-box !important;
+	background: var(--scrollbar) !important;
+	border-radius: 10px !important;
+	border: 2px solid transparent !important;
+	min-height: 40px !important;
+	min-width: 3px !important;
+	z-index: 12 !important;
+}
+
+html ::-webkit-scrollbar-thumb
+{
+	background-clip: padding-box !important;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+	background-color: var(--scrollbar_hover) !important;
+	border: none !important;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+	background-color: var(--scrollbar_active) !important;
+	border: none !important;
+}
+
+/* --- New Login View --- */
+/* BG */
+#root [class*="login_Login_"],
+#root [class*="login_Login_"] [class*="newlogindialog_EmbeddedRoot_"],
+#root [class*="login_Login_"] [class*="newlogindialog_StandardLayout_"][class*="newlogindialog_Embedded_"]
+{
+	background: var(--bg) !important;
+	overflow: hidden !important;
+	user-select: none !important;
+}
+
+#root [class*="login_Login_"] [class*="login_TitleBar_"]
+{
+	height: 100px !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_EmbeddedRoot_"]
+{
+	padding: 40px 24px 16px 24px !important;
+}
+
+/* Text */
+#root [class*="login_Login_"] [class*="newlogindialog_Highlight_"]
+{
+	color: var(--fg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_FormError_"]
+{
+	color: var(--error) !important;
+}
+
+/* Labels */
+#root [class*="login_Login_"] [class*="newlogindialog_FieldLabel_"]
+{
+	color: var(--dim_label_fg) !important;
+	left: 14px !important;
+	margin-bottom: -3px !important;
+	pointer-events: none !important;
+	position: relative !important;
+	top: 22px !important;
+	text-transform: none !important;
+	font-family: var(--basefont) !important;
+	font-size: 12px !important;
+	font-weight: 400 !important;
+}
+
+/* Entry */
+#root [class*="login_Login_"] [class*="newlogindialog_TextInput_"]
+{
+	background: var(--card_bg) !important;
+	border-radius: var(--card_radius) !important;
+	border: none !important;
+	min-height: 34px !important;
+	padding: 18px 14px 2px 14px !important;
+	transition: var(--focus_transition) !important;
+	font-family: var(--basefont) !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_TextInput_"]:hover
+{
+	background: var(--button_hover_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_TextInput_"]:focus
+{
+	box-shadow: var(--focus_ring_bs) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_LoginForm_"]
+{
+	max-width: 480px !important;
+	margin: auto !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_LoginForm_"] [class*="newlogindialog_TextInput_"][type="text"]
+{
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	margin-bottom: -25px !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_LoginForm_"] [class*="newlogindialog_TextInput_"][type="password"]
+{
+	border-top-right-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+}
+
+/* Remember Me */
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]:empty
+{
+	background: var(--checkbox_bg) !important;
+	border-radius: var(--checkbox_radius) !important;
+	box-shadow: var(--checkbox_bs) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]
+{
+	background: var(--checkbox_checked_bg) !important;
+	background-blend-mode: var(--button_suggested_blend) !important;
+	border-radius: var(--checkbox_radius) !important;
+	box-shadow: none !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]:hover
+{
+	background-color: var(--button_suggested_hover_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]:empty:active
+{
+	background: var(--button_hover_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]:active
+{
+	background-color: var(--button_suggested_click_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"] [class*="newlogindialog_Check_"] svg
+{
+	stroke-width: var(--checkbox_checked_sw) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Checkbox_"]:focus
+{
+	outline: none !important;
+}
+
+/* Submit Button */
+#root [class*="login_Login_"] [class*="newlogindialog_SubmitButton_"]
+{
+	background-blend-mode: var(--button_suggested_blend) !important;
+	background: var(--button_suggested_bg) !important;
+	border-radius: var(--button_pill_radius) !important;
+	margin-bottom: 16px !important;
+	transition: var(--focus_transition) !important;
+	padding: 12px 24px !important;
+	width: auto !important;
+	min-width: 150px !important;
+	font-family: var(--basefont) !important;
+	font-size: 15px !important;
+	font-weight: 700 !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_SubmitButton_"]:hover
+{
+	background-color: var(--button_suggested_hover_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_SubmitButton_"]:active
+{
+	background-color: var(--button_suggested_click_bg) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_SubmitButton_"]:focus
+{
+	outline: none !important;
+}
+
+/* Window Controls */
+#root [class*="login_CloseButton_"]
+{
+	background-color: var(--button_bg) !important;
+	border-radius: 50% !important;
+	height: 24px !important;
+	margin-left: 14px !important;
+	transition: var(--focus_transition) !important;
+	width: 24px !important;
+}
+
+#root [class*="login_CloseButton_"]:hover
+{
+	background-color: var(--button_hover_bg) !important;
+}
+
+#root [class*="login_CloseButton_"]:active
+{
+	background-color: var(--button_active_bg) !important;
+}
+
+#root [class*="login_CloseButton_"] > svg
+{
+	height: 10px !important;
+	margin-left: 7px !important;
+	margin-top: 5px !important;
+	width: 10px !important;
+}
+
+#root [class*="login_CloseButton_"] > svg > *
+{
+	stroke: var(--headerbar_fg) !important;
+}
+
+#root [class*="login_Login_"]
+{
+	height: 100% !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Login_"]
+{
+	display: flex !important;
+	height: 100% !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_BetaContainer_"],
+#root [class*="login_Login_"] [class*="newlogindialog_LoginForm_"]
+{
+	align-items: stretch !important;
+	align-content: center !important;
+	align-self: center !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_EmbeddedRoot_"]
+{
+	gap: 16px !important;
+	flex-grow: 1 !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_JoinBetaButton_"]
+{
+	text-decoration: none !important;
+	border-radius: var(--button_pill_radius) !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_HeaderLogo_"]
+{
+	margin: auto !important;
+}
+
+/* Steam Guard dialog */
+#root [class*="login_Login_"] [class*="newlogindialog_Compact_"]
+{
+	width: 100% !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Compact_"] [class*="newlogindialog_PrimaryHeader_"]
+{
+	text-transform: none !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_Compact_"] [class*="newlogindialog_FormContainer_"]
+{
+	padding: 0 !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_CheckboxField_"] [class*="newlogindialog_CheckboxFieldLabel_"],
+#root [class*="login_Login_"] [class*="newlogindialog_TextLink_"],
+#root [class*="login_Login_"] [class*="newlogindialog_UseMobileAppForQR_"],
+#root [class*="login_Login_"] [class*="newlogindialog_EmbeddedRootFooter_"]
+{
+	color: var(--fg) !important;
+	font-family: var(--basefont) !important;
+	font-size: 13px !important;
+	font-weight: 400 !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_TextLink_"]
+{
+	font-weight: 700 !important;
+	text-decoration: none !important;
+}
+
+#root [class*="login_Login_"] [class*="newlogindialog_TextLink_"]:hover
+{
+	text-decoration: underline !important;
+}
+/* ------------------------------ */
+/* --- Hide What's New Shelf  --- */
+/* ------------------------------ */
+[class*="libraryhome_UpdatesContainer_"],
+[class*="libraryhomeshowcases_AddShowcaseRow_"]
+{
+	display: none !important;
+}
+
+/* ------------------------------------------ */
+/* --- Show Minimize and Maximize Button  --- */
+/* ------------------------------------------ */
+.title-bar-actions .title-area-icon.minimizeButton,
+.title-bar-actions .title-area-icon.maximizeButton
+{
+	display: block !important;
+}
+
