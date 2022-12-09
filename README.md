@@ -56,7 +56,7 @@
 ## FAQ
 
 -	Q: **_"How can I get rounded corners?"_**\
-	A: use [Rounded Window Corners extension](https://github.com/yilozt/rounded-window-corners) on GNOME
+	A: Use [Rounded Window Corners extension](https://github.com/yilozt/rounded-window-corners) on GNOME
 
 ## Thanks to
 
