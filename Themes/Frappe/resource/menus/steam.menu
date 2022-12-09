@@ -3,8 +3,7 @@ menubar
 	Steam
 	{
 		text=""
-
-		SkinVersion			{ text="Adwaita for Steam v0.20" shellcmd="steam://openurl/https://github.com/tkashkin/Adwaita-for-Steam" }
+		SkinVersion			{ text="Adwaita for Steam v0.21" shellcmd="steam://openurl/https://github.com/tkashkin/Adwaita-for-Steam" }
 		ThemeVersion			{ text="Catppuccin Theme v0.1" shellcmd="steam://openurl/https://github.com/andrew1412/Catppuccin-Adwaita-for-Steam" }
 
 		Divider				{}
