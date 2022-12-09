@@ -1,6 +1,7 @@
 colors.styles
 {
 	// Adwaita colors from https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/named-colors.html
+	// Catppuccin colors from https://github.com/catppuccin/palette
 	colors
 	{
 		accent="81 87 109 255"
