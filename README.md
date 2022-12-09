@@ -60,7 +60,9 @@
 
 ## Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [@tkashkin](https://github.com/tkashkin): Adwaita for Steam
+- [@Foldex](https://github.com/Foldex): AdwSteamGtk
+- [@Catppuccin](https://github.com/catppuccin): Catppuccin color palet
 
 &nbsp;
 
