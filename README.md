@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/preview.webp"/>
+  <img src="https://raw.githubusercontent.com/andrew1412/Catppuccin-Adwaita-for-Steam/main/assets/screenshot-frappe.png"/>
 </p>
 
 ## TODO
@@ -33,7 +33,7 @@
 
 <details>
   <summary>🪴 Frappé</summary>
-  <img src="https://raw.githubusercontent.com/andrew1412/Catppuccin-Adwaita-for-Steam/blob/main/assets/screenshot-frappe.png"/>
+  <img src="https://raw.githubusercontent.com/andrew1412/Catppuccin-Adwaita-for-Steam/main/assets/screenshot-frappe.png"/>
 </details>
 
 <details>
