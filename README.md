@@ -54,9 +54,9 @@
 
 ## Usage
 
-1. 
+1. Install [AdwSteamGtk](https://github.com/Foldex/AdwSteamGtk) from [Flathub](https://flathub.org/apps/details/io.github.Foldex.AdwSteamGtk)
 2. 
-3. 
+3. Install the respective theme 
 4. 
 
 ## FAQ
