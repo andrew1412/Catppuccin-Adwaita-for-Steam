@@ -46,6 +46,12 @@
   Soon
 </details>
 
+## Requirements
+
+* [Cantarell fonts](https://gitlab.gnome.org/GNOME/cantarell-fonts) as static fonts. Some distros install Cantarell as a variable font that is not supported by Steam, see [#45](https://github.com/tkashkin/Adwaita-for-Steam/issues/45).
+* The [Adwaita for Steam](https://github.com/tkashkin/Adwaita-for-Steam) skin was created for the Linux version of Steam using Gnome and wasn't tested on Windows or macOS. It will work with some visual problems.
+* This theme works patching the installation of [AdwSteamGtk](https://github.com/Foldex/AdwSteamGtk) and it probably don't work using the installer script or a manual installation of the skin.
+
 ## Usage
 
 1. 
