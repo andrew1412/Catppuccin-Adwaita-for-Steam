@@ -22,6 +22,7 @@
 - [x] Edit  colors of the web based content.
 - [x] Fix rounded avatar on headbar (focus and unfocus mode)
 - [x] Fix rounded corners in settings to match the theme
+- [ ] Finish Usage
 - [ ] Make the rest of flavors (not doing Latte)
 
 ## Previews
