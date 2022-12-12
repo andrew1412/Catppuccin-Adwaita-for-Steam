@@ -15,7 +15,7 @@
   <img src="https://raw.githubusercontent.com/andrew1412/Catppuccin-Adwaita-for-Steam/main/assets/screenshot-frappe.png"/>
 </p>
 
-## TODO
+## Todo
 
 - [x] Edit colors of the main window
 - [x] Fix unfocus headbar colors
