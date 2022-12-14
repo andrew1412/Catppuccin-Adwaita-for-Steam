@@ -19,7 +19,7 @@
 
 - [x] Edit colors of the main window
 - [x] Fix unfocus headbar colors
-- [x] Edit  colors of the web based content.
+- [x] Edit  colors of the web based content
 - [x] Fix rounded avatar on headbar (focus and unfocus mode)
 - [x] Fix rounded corners in settings to match the theme
 - [ ] Finish Usage
@@ -55,9 +55,9 @@
 
 ## Usage
 
-1. Install [AdwSteamGtk](https://github.com/Foldex/AdwSteamGtk) from [Flathub](https://flathub.org/apps/details/io.github.Foldex.AdwSteamGtk)
+1. Install [AdwSteamGtk](https://github.com/Foldex/AdwSteamGtk) from [Flathub](https://flathub.org/apps/details/io.github.Foldex.AdwSteamGtk).
 2. 
-3. Install the respective theme 
+3. Install the respective theme
 4. 
 
 ## FAQ
